@@ -3,8 +3,8 @@ import '../pokemonSearch/SearchStyling.css';
 
 const PokemonSearch = () => {
     return (
-        <div>
-            <input />
+        <div className="site-header">
+            <input className="text-input" placeholder="Enter Pokemon name..."/>
         </div>
     )
 }
