@@ -1,5 +1,5 @@
 import React from 'react';
-import '../pokemonSearch/SearchStyling.css';
+import './SearchStyling.css';
 
 const PokemonSearch = () => {
     return (
