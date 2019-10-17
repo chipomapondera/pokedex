@@ -1,7 +1,8 @@
 import React from 'react';
 import PokemonCard from './pokemonCard/PokemonCard'
-import './BodyStyling.css'
 import PokemonAttribute from './pokemonAttribute/PokemonAttribute';
+import './BodyStyling.css'
+
 
 const BodyWrapper = (props) => {
     return (
