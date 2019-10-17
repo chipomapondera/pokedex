@@ -12,6 +12,7 @@ const BodyWrapper = (props) => {
 
 const PokemonBody =({info})=> {
     const {imageUrl, pokemonName} = info
+
     return (
         <BodyWrapper>
             <PokemonCard imageUrl={imageUrl} pokemonName={pokemonName}/>
