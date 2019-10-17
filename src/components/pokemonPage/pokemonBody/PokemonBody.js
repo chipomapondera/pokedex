@@ -14,7 +14,6 @@ const BodyWrapper = (props) => {
 
 
 const PokemonBody =({info})=> {
-    console.log('this', info)
     return (
         <BodyWrapper>
             {info.map((card) => {

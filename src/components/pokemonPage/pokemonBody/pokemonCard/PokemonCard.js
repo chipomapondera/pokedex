@@ -3,7 +3,6 @@ import './CardStyling.css';
 
 
 const PokemonCard =({imageUrl, pokemonName})=> {
-console.log('this', imageUrl, pokemonName)
     return (
         <div className="info-card">
             <div className="image-wrapper"> 

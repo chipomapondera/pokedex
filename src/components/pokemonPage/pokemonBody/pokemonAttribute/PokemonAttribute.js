@@ -11,7 +11,6 @@ const PokemonAttribute = ({pokemonAttributes}) => {
         <div className="attribute-container">
             {pokemonAttributes.map((pokemonAttribute) => {
                 const colourClass = buttonClassName(pokemonAttribute)
-                console.log('this', colourClass)
                 return <div className={`pokemon-attribute ${colourClass}`}>{pokemonAttribute}</div>
             })}
         </div>

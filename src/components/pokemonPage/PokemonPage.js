@@ -1,13 +1,22 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 import PokemonSearch from './pokemonSearch/PokemonSearch';
 import PokemonBody from './pokemonBody/PokemonBody';
 
 const PokemonPage = ({info}) => {
 
+    const [userText, setUserText] = useState('')
+
+    const updateUserText = (event) => {
+        event.preventDefault();
+    
+        setUserText(event.target.value);
+        console.log('this is the', userText)
+    }
+
     return (
         <>
-            <PokemonSearch />
-            <PokemonBody info={info}/>
+            <PokemonSearch value={userText} onChange={updateUserText} />
+            <PokemonBody info={info} />
         </>
     )
 }
