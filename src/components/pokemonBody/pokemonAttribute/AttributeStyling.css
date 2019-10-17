@@ -1,10 +1,58 @@
 .pokemon-attribute {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100px;
     height: 20px;
-    background-color: white;
-    margin: 0px auto;
+    margin: 0px 10px;
 }
+
+.attribute-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+    margin: 10px;
+}
+
+.pokemon-attribute-grass {
+    background-color: #9ACD32;
+}
+
+.pokemon-attribute-poison {
+    background-color: #EE82EE;
+}
+
+.pokemon-attribute-fire {
+    background-color: #FFA500;
+}
+
+.pokemon-attribute-flying {
+    background-color: #C0C0C0;
+}
+
+.pokemon-attribute-water {
+    background-color: #66CDAA;
+}
+
+.pokemon-attribute-bug {
+    background-color: #FFD700;
+}
+
+.pokemon-attribute-normal {
+    background-color: #FFDAB9;
+}
+
+.pokemon-attribute-ground {
+    background-color: #CD853F;
+}
+
+.pokemon-attribute-fairy {
+    background-color: #FFC0CB;
+}
+
+.pokemon-attribute-electric {
+    background-color: #00BFFF;
+}
+

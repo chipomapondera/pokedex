@@ -11,17 +11,16 @@ const BodyWrapper = (props) => {
     )
 }
 
+
 const PokemonBody =({info})=> {
     console.log('this', info)
     return (
         <BodyWrapper>
             {info.map((card) => {
-                const {imageUrl, pokemonName} = card
+                const {imageUrl, pokemonName, pokemonAttributes} = card
                 return <div className="card-container">
-                    <PokemonCard imageUrl={imageUrl} pokemonName={pokemonName}/>
-                    {card.pokemonAttributes.map((specialAttribute) => {
-                        return <div className="attribute-container"><PokemonAttribute pokemonAttribute={specialAttribute} /></div>
-                    })}
+                    <PokemonCard imageUrl={imageUrl} pokemonName={pokemonName} />
+                    <PokemonAttribute pokemonAttributes={pokemonAttributes} />
                 </div>
             })}
         </BodyWrapper>
