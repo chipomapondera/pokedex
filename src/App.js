@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <PokemonSearch />
-      <PokemonBody info={data.pokemonInfo[0]}/>
+      <PokemonBody info={data.pokemonInfo}/>
     </div>
   );
 }
