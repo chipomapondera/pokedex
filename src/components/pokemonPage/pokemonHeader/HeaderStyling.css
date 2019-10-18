@@ -8,3 +8,12 @@
     justify-content: space-around;
     border-bottom: 1px solid #1E90FF;
   }
+
+  .text-input {
+    background-color: #E6E6FA;
+    width: 230px;
+    height: 25px;
+    justify-content: left;
+    font-size: 12px;
+    margin-top: 15px;
+  }
