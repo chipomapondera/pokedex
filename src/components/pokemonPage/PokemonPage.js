@@ -2,7 +2,7 @@ import React, {Fragment, useState} from 'react';
 import PokemonHeader from './pokemonHeader/PokemonHeader';
 import PokemonBody from './pokemonBody/PokemonBody';
 
-const PokemonPage = ({allPokemonInfo}) => {
+const PokemonPage = ({allPokemonInfo, allAttributeFilters}) => {
 
     const [userText, setUserText] = useState('')
 
@@ -16,7 +16,7 @@ const PokemonPage = ({allPokemonInfo}) => {
     return (
         <>
             <PokemonHeader
-
+                allAttributeFilters={allAttributeFilters}
                 value={userText} 
                 onChange={updateUserText} 
             />

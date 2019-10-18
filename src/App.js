@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <PokemonPage allPokemonInfo={data.pokemonDirectory.pokemonsInfo} /> 
+      <PokemonPage allPokemonInfo={data.pokemonDirectory.pokemonsInfo} allAttributeFilters={data.attributeFilterInfo}/> 
     </div>
   );
 }

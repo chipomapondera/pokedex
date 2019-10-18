@@ -1,19 +1,20 @@
 import React from 'react';
 import './AttributeFilterStyling.css';
 
-const PokemonAttributeFilter = () => {
+const PokemonAttributeFilter = ({grassButton, poisonButton, fireButton, flyingButton, waterButton, bugButton, normalButton, electricButton, groundButton, fairyButton}) => {
+
     return (
         <div className="attribute-filter"> 
-            <button className="attribute-button">Grass</button>
-            <button className="attribute-button">Poison</button>
-            <button className="attribute-button">Fire</button>
-            <button className="attribute-button">Flying</button>
-            <button className="attribute-button">Water</button>
-            <button className="attribute-button">Bug</button>
-            <button className="attribute-button">Normal</button>
-            <button className="attribute-button">Electric</button>
-            <button className="attribute-button">Ground</button>
-            <button className="attribute-button">Fairy</button>
+            <button className="attribute-button">{grassButton}</button>
+            <button className="attribute-button">{poisonButton}</button>
+            <button className="attribute-button">{fireButton}</button>
+            <button className="attribute-button">{flyingButton}</button>
+            <button className="attribute-button">{waterButton}</button>
+            <button className="attribute-button">{bugButton}</button>
+            <button className="attribute-button">{normalButton}</button>
+            <button className="attribute-button">{electricButton}</button>
+            <button className="attribute-button">{groundButton}</button>
+            <button className="attribute-button">{fairyButton}</button>
         </div>
     )
 }

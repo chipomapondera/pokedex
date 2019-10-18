@@ -4,12 +4,24 @@ import PokemonAttributeFilter from './pokemonAttributeFilter/PokemonAttributeFil
 import './HeaderStyling.css';
 
 
-const PokemonHeader = ({value, onChange}) => {
+const PokemonHeader = ({allAttributeFilters, value, onChange}) => {
+    const {grassButton, poisonButton, fireButton, flyingButton, waterButton, bugButton, normalButton, electricButton, groundButton, fairyButton} = allAttributeFilters
     return (
         <>
             <div className="site-header">
                 <PokemonSearch value={value} onChange={onChange}/>
-                <PokemonAttributeFilter />
+                <PokemonAttributeFilter 
+                    grassButton={grassButton}
+                    poisonButton={poisonButton}
+                    fireButton={fireButton}
+                    flyingButton={flyingButton}
+                    waterButton={waterButton}
+                    bugButton={bugButton}
+                    normalButton={normalButton}
+                    electricButton={electricButton}
+                    groundButton={groundButton}
+                    fairyButton={fairyButton}
+                />
             </div>
         </>
     )

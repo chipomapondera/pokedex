@@ -1,6 +1,6 @@
 const data = {
 
-    headerInfo: {
+    attributeFilterInfo: {
         grassButton: 'Grass',
         poisonButton: 'Poison',
         fireButton: 'Fire',
