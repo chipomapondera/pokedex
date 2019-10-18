@@ -3,7 +3,7 @@ import './SearchStyling.css';
 
 const PokemonSearch = ({value, onChange}) => {
     return (
-        <div className="site-header">
+        <div>
             <input className="text-input" placeholder="Enter Pokemon name..." value={value} onChange={onChange}/>
         </div>
     )

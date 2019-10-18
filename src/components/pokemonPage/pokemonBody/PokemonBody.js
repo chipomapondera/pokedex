@@ -13,10 +13,10 @@ const BodyWrapper = (props) => {
 }
 
 
-const PokemonBody =({info})=> {
+const PokemonBody =({allPokemonInfo})=> {
     return (
         <BodyWrapper>
-            {info.map((card) => {
+            {allPokemonInfo.map((card) => {
                 const {imageUrl, pokemonName, pokemonAttributes} = card
                 return <div className="card-container">
                     <PokemonCard imageUrl={imageUrl} pokemonName={pokemonName} />

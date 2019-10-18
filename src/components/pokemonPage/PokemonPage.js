@@ -1,8 +1,8 @@
 import React, {Fragment, useState} from 'react';
-import PokemonSearch from './pokemonSearch/PokemonSearch';
+import PokemonHeader from './pokemonHeader/PokemonHeader';
 import PokemonBody from './pokemonBody/PokemonBody';
 
-const PokemonPage = ({info}) => {
+const PokemonPage = ({allPokemonInfo}) => {
 
     const [userText, setUserText] = useState('')
 
@@ -15,8 +15,12 @@ const PokemonPage = ({info}) => {
 
     return (
         <>
-            <PokemonSearch value={userText} onChange={updateUserText} />
-            <PokemonBody info={info} />
+            <PokemonHeader
+
+                value={userText} 
+                onChange={updateUserText} 
+            />
+            <PokemonBody allPokemonInfo={allPokemonInfo} />
         </>
     )
 }

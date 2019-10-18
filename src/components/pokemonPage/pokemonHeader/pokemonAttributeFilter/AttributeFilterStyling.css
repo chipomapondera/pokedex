@@ -1,0 +1,11 @@
+.attribute-filter {
+    margin-bottom: 15px;
+}
+
+.attribute-button {
+    width: 100px;
+    height: 22px;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 12px;
+}
