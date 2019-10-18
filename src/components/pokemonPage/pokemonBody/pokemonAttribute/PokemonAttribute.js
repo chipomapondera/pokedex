@@ -1,7 +1,7 @@
 import React from 'react';
 import './AttributeStyling.css'
 
-const buttonClassName = (pokemonAttribute) => {
+export const buttonClassName = (pokemonAttribute) => {
     const lowerCaseAttribute = pokemonAttribute.toLowerCase()
     return `pokemon-attribute-${lowerCaseAttribute}`
 }

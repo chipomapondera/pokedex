@@ -1,16 +1,17 @@
 const data = {
 
-    attributeFilterInfo: {
-        grassButton: 'Grass',
-        poisonButton: 'Poison',
-        fireButton: 'Fire',
-        flyingButton: 'Flying',
-        waterButton: 'Water',
-        bugButton: 'Bug',
-        normalButton: 'Normal',
-        electricButton: 'Electric',
-        groundButton: 'Ground',
-        fairyButton: 'Fairy'
+    attributeButtons: {
+        attributeInfo : ['Grass', 'Poison', 'Fire', 'Flying', 'Water', 'Bug', 'Normal', 'Electric', 'Ground', 'Fairy']
+        // grassButton: 'Grass',
+        // poisonButton: 'Poison',
+        // fireButton: 'Fire',
+        // flyingButton: 'Flying',
+        // waterButton: 'Water',
+        // bugButton: 'Bug',
+        // normalButton: 'Normal',
+        // electricButton: 'Electric',
+        // groundButton: 'Ground',
+        // fairyButton: 'Fairy'
     },
 
     pokemonDirectory: {

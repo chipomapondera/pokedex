@@ -1,20 +1,20 @@
 import React from 'react';
 import './AttributeFilterStyling.css';
+import {buttonClassName} from '../../pokemonBody/pokemonAttribute/PokemonAttribute';
 
-const PokemonAttributeFilter = ({grassButton, poisonButton, fireButton, flyingButton, waterButton, bugButton, normalButton, electricButton, groundButton, fairyButton}) => {
+// const attributeFilterClass = (attributeTerm) => {
+//     const lowerAttributeName = attributeTerm.toLowerCase()
+//     return `attribute-button-${lowerAttributeName}`
+// }
 
+const PokemonAttributeFilter = ({allAttributeFilters}) => {
     return (
         <div className="attribute-filter"> 
-            <button className="attribute-button">{grassButton}</button>
-            <button className="attribute-button">{poisonButton}</button>
-            <button className="attribute-button">{fireButton}</button>
-            <button className="attribute-button">{flyingButton}</button>
-            <button className="attribute-button">{waterButton}</button>
-            <button className="attribute-button">{bugButton}</button>
-            <button className="attribute-button">{normalButton}</button>
-            <button className="attribute-button">{electricButton}</button>
-            <button className="attribute-button">{groundButton}</button>
-            <button className="attribute-button">{fairyButton}</button>
+                {allAttributeFilters.map((attributeTerm) => {
+                    console.log('attributeTerm', attributeTerm)
+                    const colorClass = buttonClassName(attributeTerm)
+                    return <button className={`attribute-button ${colorClass}`}>{attributeTerm}</button>
+                })}
         </div>
     )
 }
