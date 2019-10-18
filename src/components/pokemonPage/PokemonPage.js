@@ -6,8 +6,8 @@ import PokemonBody from './pokemonBody/PokemonBody';
 const PokemonPage = ({allPokemonInfo, allAttributeFilters}) => {
     const [userText, setUserText] = useState('')
     const [pokemonData, setPokemonData] = useState(allPokemonInfo)
-    
-    const upodatePokemonData = debounce(() =>{
+
+    const updatePokemonData = debounce(() =>{
         if(userText) {
           const filterData = filter(allPokemonInfo, function(pokemon) { 
               const normalPokemonName = pokemon.pokemonName.toLowerCase()
@@ -20,12 +20,30 @@ const PokemonPage = ({allPokemonInfo, allAttributeFilters}) => {
     },250, { 'maxWait': 1000 })
 
     useEffect(()=>{
-        upodatePokemonData()
+        updatePokemonData()
     },[userText])
+
+    const attributeSelected = (attributeSelector) => {
+        if(attributeSelector) {
+            const filterData = filter(allPokemonInfo, function(pokemon) {
+
+                return pokemon.pokemonAttributes.includes(attributeSelector);
+            })
+            console.log(filterData)
+            setPokemonData(filterData)
+        } else {
+            setPokemonData(allPokemonInfo)
+        }
+    }
 
     return (
         <>
-            <PokemonHeader allAttributeFilters={allAttributeFilters} value={userText} onChange={(e)=>setUserText(e.target.value)} />
+            <PokemonHeader 
+                allAttributeFilters={allAttributeFilters} 
+                value={userText} 
+                onChange={(e)=>setUserText(e.target.value)} 
+                onClickHandler={attributeSelected}
+            />
             <PokemonBody allPokemonInfo={pokemonData} />
         </>
     )
