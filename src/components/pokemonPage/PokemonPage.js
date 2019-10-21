@@ -26,14 +26,15 @@ const PokemonPage = ({allPokemonInfo, allAttributeFilters}) => {
     const attributeSelected = (attributeSelector) => {
         if(attributeSelector) {
             const filterData = filter(allPokemonInfo, function(pokemon) {
-
                 return pokemon.pokemonAttributes.includes(attributeSelector);
             })
             console.log(filterData)
             setPokemonData(filterData)
-        } else {
-            setPokemonData(allPokemonInfo)
-        }
+        } 
+    }
+
+    const allButton = () => {
+        setPokemonData(allPokemonInfo)
     }
 
     return (
@@ -43,6 +44,7 @@ const PokemonPage = ({allPokemonInfo, allAttributeFilters}) => {
                 value={userText} 
                 onChange={(e)=>setUserText(e.target.value)} 
                 onClickHandler={attributeSelected}
+                allOnClickHandler={allButton}
             />
             <PokemonBody allPokemonInfo={pokemonData} />
         </>

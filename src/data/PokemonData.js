@@ -1,7 +1,7 @@
 const data = {
 
     attributeButtons: {
-        attributeInfo : ['Grass', 'Poison', 'Fire', 'Flying', 'Water', 'Bug', 'Normal', 'Electric', 'Ground', 'Fairy', 'All']
+        attributeInfo : ['Grass', 'Poison', 'Fire', 'Flying', 'Water', 'Bug', 'Normal', 'Electric', 'Ground', 'Fairy']
     },
 
     pokemonDirectory: {

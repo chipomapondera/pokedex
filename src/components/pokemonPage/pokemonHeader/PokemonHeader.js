@@ -3,12 +3,13 @@ import PokemonAttributeFilter from './pokemonAttributeFilter/PokemonAttributeFil
 
 import './HeaderStyling.css';
 
-const PokemonHeader = ({allAttributeFilters, value, onChange, onClickHandler}) => {
+const PokemonHeader = ({allAttributeFilters, value, onChange, onClickHandler, allOnClickHandler}) => {
     return (
         <>
             <div className="site-header">
                 <input className="text-input" placeholder="Enter Pokemon name..." value={value} onChange={onChange}/>
                 <PokemonAttributeFilter allAttributeFilters={allAttributeFilters} onClickHandler={onClickHandler}/>
+                <button onClick={()=>allOnClickHandler()}>All</button>
             </div>
             
         </>
