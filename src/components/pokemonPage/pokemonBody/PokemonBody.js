@@ -16,13 +16,15 @@ const BodyWrapper = (props) => {
 const PokemonBody =({allPokemonInfo})=> {
     return (
         <BodyWrapper>
-            {allPokemonInfo.map((card) => {
-                const {imageUrl, pokemonName, pokemonAttributes} = card
-                return <div className="card-container">
-                    <PokemonCard imageUrl={imageUrl} pokemonName={pokemonName} />
-                    <PokemonAttribute pokemonAttributes={pokemonAttributes} />
-                </div>
-            })}
+            <div className="list-wrapper">
+                {allPokemonInfo.map((card) => {
+                    const {imageUrl, pokemonName, pokemonAttributes} = card
+                    return <div className="card-container">
+                        <PokemonCard imageUrl={imageUrl} pokemonName={pokemonName} />
+                        <PokemonAttribute pokemonAttributes={pokemonAttributes} />
+                    </div>
+                })}
+            </div>    
         </BodyWrapper>
     )
 }

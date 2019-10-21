@@ -4,7 +4,7 @@ import {buttonClassName} from '../../pokemonBody/pokemonAttribute/PokemonAttribu
 
 const PokemonAttributeFilter = ({allAttributeFilters, onClickHandler}) => {
     return (
-        <div className="attribute-filter"> 
+        <div > 
                 {allAttributeFilters.map((attributeTerm) => {
                     console.log('attributeTerm', attributeTerm)
                     const colorClass = buttonClassName(attributeTerm)

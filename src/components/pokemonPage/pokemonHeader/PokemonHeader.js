@@ -8,8 +8,10 @@ const PokemonHeader = ({allAttributeFilters, value, onChange, onClickHandler, al
         <>
             <div className="site-header">
                 <input className="text-input" placeholder="Enter Pokemon name..." value={value} onChange={onChange}/>
-                <PokemonAttributeFilter allAttributeFilters={allAttributeFilters} onClickHandler={onClickHandler}/>
-                <button onClick={()=>allOnClickHandler()}>All</button>
+                <div className="attribute-filter">
+                    <PokemonAttributeFilter allAttributeFilters={allAttributeFilters} onClickHandler={onClickHandler}/>
+                    <button className="all-button" onClick={()=>allOnClickHandler()}>All</button>
+                </div>
             </div>
             
         </>
