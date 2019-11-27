@@ -10,8 +10,8 @@ const PokemonAttribute = ({pokemonAttributes}) => {
     return (
         <div className="attribute-container">
             {pokemonAttributes.map((pokemonAttribute) => {
-                const colourClass = buttonClassName(pokemonAttribute)
-                return <div className={`pokemon-attribute ${colourClass}`}>{pokemonAttribute}</div>
+                const colourClass = buttonClassName(pokemonAttribute.type.name)
+                return <div className={`pokemon-attribute ${colourClass}`}>{pokemonAttribute.type.name}</div>
             })}
         </div>
             )}

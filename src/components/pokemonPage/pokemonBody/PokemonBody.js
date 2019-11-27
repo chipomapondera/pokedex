@@ -1,8 +1,6 @@
 import React from 'react';
 import PokemonCard from './pokemonCard/PokemonCard'
-import PokemonAttribute from './pokemonAttribute/PokemonAttribute';
 import './BodyStyling.css'
-
 
 const BodyWrapper = (props) => {
     return (
@@ -18,10 +16,9 @@ const PokemonBody =({allPokemonInfo})=> {
         <BodyWrapper>
             <div className="list-wrapper">
                 {allPokemonInfo.map((card) => {
-                    const {imageUrl, pokemonName, pokemonAttributes} = card
+                    const { url} = card
                     return <div className="card-container">
-                        <PokemonCard imageUrl={imageUrl} pokemonName={pokemonName} />
-                        <PokemonAttribute pokemonAttributes={pokemonAttributes} />
+                        <PokemonCard pokemonUrl={url} />
                     </div>
                 })}
             </div>    
